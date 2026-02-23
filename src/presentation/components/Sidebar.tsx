@@ -91,10 +91,14 @@ const Sidebar = () => {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-slate-700">
-        <button className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-slate-900 py-3 rounded-lg transition-colors mb-4">
+        <a 
+          href="/JennifferEspinoza.pdf" 
+          download="JennifferEspinoza_CV.pdf"
+          className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-slate-900 py-3 rounded-lg transition-colors mb-4"
+        >
           <Download size={18} />
           <span className="text-sm font-medium">Descargar CV</span>
-        </button>
+        </a>
         
         <div className="space-y-2 text-sm text-gray-400">
           <div className="flex items-center gap-2">
