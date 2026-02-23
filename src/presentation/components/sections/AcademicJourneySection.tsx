@@ -51,35 +51,35 @@ const AcademicJourneySection = () => {
   ]
 
   return (
-    <section className="py-16 px-8">
+    <section className="py-12 md:py-16 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-light text-gray-800 mb-12 text-center">
+        <h2 className="text-xl md:text-2xl font-light text-gray-800 mb-8 md:mb-12 text-center">
           Trayectoria Académica
         </h2>
 
         {/* Timeline horizontal */}
-        <div className="relative mb-12">
+        <div className="relative mb-8 md:mb-12">
           {/* Línea conectora */}
           <div className="absolute top-8 left-0 right-0 h-0.5 bg-gray-300 hidden lg:block"></div>
           
           {/* Círculos con números */}
-          <div className="grid grid-cols-4 lg:grid-cols-8 gap-4 relative">
+          <div className="grid grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4 relative">
             {semesters.map((semester, index) => (
               <div key={index} className="flex flex-col items-center group relative">
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white text-xl font-light mb-3 cursor-pointer transition-all ${
+                <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-white text-lg md:text-xl font-light mb-2 md:mb-3 cursor-pointer transition-all ${
                   index === semesters.length - 1 ? 'bg-gray-900 hover:bg-gray-700' : 'bg-gray-600 hover:bg-gray-500'
                 }`}>
                   {semester.number}
                 </div>
-                <p className="text-xs text-center font-light text-gray-700">{semester.title}</p>
-                <p className="text-xs text-center font-light text-gray-500 mt-1">{semester.description}</p>
+                <p className="text-[10px] md:text-xs text-center font-light text-gray-700 leading-tight">{semester.title}</p>
+                <p className="text-[9px] md:text-xs text-center font-light text-gray-500 mt-0.5 md:mt-1 hidden sm:block">{semester.description}</p>
                 
                 {/* Tooltip con materias - aparece en hover */}
-                <div className="absolute top-20 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm shadow-lg rounded-lg p-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 border border-gray-200">
-                  <h4 className="text-sm font-light text-gray-900 mb-2">{semester.number}. {semester.description}</h4>
+                <div className="absolute top-16 md:top-20 left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-sm shadow-lg rounded-lg p-3 md:p-4 w-56 md:w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 border border-gray-200">
+                  <h4 className="text-xs md:text-sm font-light text-gray-900 mb-2">{semester.number}. {semester.description}</h4>
                   <ul className="space-y-1">
                     {semester.subjects.map((subject, idx) => (
-                      <li key={idx} className="text-xs font-light text-gray-600">
+                      <li key={idx} className="text-[10px] md:text-xs font-light text-gray-600">
                         • {subject}
                       </li>
                     ))}
@@ -90,18 +90,18 @@ const AcademicJourneySection = () => {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-8">
+        <div className="mt-8 md:mt-12 text-center">
+          <div className="inline-flex items-center gap-6 md:gap-8">
             <div className="text-center">
-              <p className="text-3xl font-light text-gray-900">7</p>
+              <p className="text-2xl md:text-3xl font-light text-gray-900">7</p>
               <p className="text-xs font-light text-gray-500">Completados</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-light text-gray-900">1</p>
+              <p className="text-2xl md:text-3xl font-light text-gray-900">1</p>
               <p className="text-xs font-light text-gray-500">En Curso</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-light text-gray-900">25+</p>
+              <p className="text-2xl md:text-3xl font-light text-gray-900">25+</p>
               <p className="text-xs font-light text-gray-500">Materias</p>
             </div>
           </div>

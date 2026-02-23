@@ -40,16 +40,16 @@ const ProjectsSection = () => {
   }
 
   return (
-    <section id="proyectos" className="py-16 px-8">
+    <section id="proyectos" className="py-12 md:py-16 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-light text-gray-800 mb-12 text-center">Proyecto Académico Destacado</h2>
+        <h2 className="text-xl md:text-3xl font-light text-gray-800 mb-8 md:mb-12 text-center">Proyecto Académico Destacado</h2>
 
         {loading ? (
           <div className="text-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-400 mx-auto"></div>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 max-w-5xl mx-auto">
             {featuredProjects.map((project) => (
               <div key={project.id} className="group">
                 <div 
@@ -125,34 +125,34 @@ const ProjectsSection = () => {
 
         {imageModalOpen && selectedImages.length > 0 && (
           <div 
-            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-2 md:p-4"
             onClick={() => setImageModalOpen(false)}
           >
             <div className="relative w-full h-full flex items-center justify-center">
               <button
                 onClick={() => setImageModalOpen(false)}
-                className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+                className="absolute top-2 md:top-4 right-2 md:right-4 text-white hover:text-gray-300 transition-colors z-10"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
 
-              {/* Flecha izquierda - fuera de la imagen */}
+              {/* Flecha izquierda */}
               {selectedImages.length > 1 && (
                 <button
                   onClick={(e) => {
                     e.stopPropagation()
                     prevImage()
                   }}
-                  className="absolute left-8 bg-white hover:bg-gray-100 text-gray-800 p-4 rounded-full transition-colors shadow-lg z-10"
+                  className="absolute left-2 md:left-8 bg-white hover:bg-gray-100 text-gray-800 p-2 md:p-4 rounded-full transition-colors shadow-lg z-10"
                 >
-                  <ChevronLeft size={32} />
+                  <ChevronLeft size={24} className="md:w-8 md:h-8" />
                 </button>
               )}
 
               {/* Contenedor de imagen */}
-              <div className="max-w-5xl max-h-[85vh] w-full flex items-center justify-center">
+              <div className="max-w-5xl max-h-[85vh] w-full flex items-center justify-center px-12 md:px-16">
                 <img 
                   src={selectedImages[currentImageIndex]} 
                   alt={`Proyecto imagen ${currentImageIndex + 1}`}
@@ -161,22 +161,22 @@ const ProjectsSection = () => {
                 />
               </div>
 
-              {/* Flecha derecha - fuera de la imagen */}
+              {/* Flecha derecha */}
               {selectedImages.length > 1 && (
                 <button
                   onClick={(e) => {
                     e.stopPropagation()
                     nextImage()
                   }}
-                  className="absolute right-8 bg-white hover:bg-gray-100 text-gray-800 p-4 rounded-full transition-colors shadow-lg z-10"
+                  className="absolute right-2 md:right-8 bg-white hover:bg-gray-100 text-gray-800 p-2 md:p-4 rounded-full transition-colors shadow-lg z-10"
                 >
-                  <ChevronRight size={32} />
+                  <ChevronRight size={24} className="md:w-8 md:h-8" />
                 </button>
               )}
 
               {/* Indicador de página */}
               {selectedImages.length > 1 && (
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white text-gray-800 px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 bg-white text-gray-800 px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium shadow-lg">
                   {currentImageIndex + 1} / {selectedImages.length}
                 </div>
               )}

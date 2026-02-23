@@ -6,7 +6,7 @@ const HeroSection = () => {
   }
 
   return (
-    <section className="flex items-start justify-center bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 px-8 pt-8 pb-0 relative overflow-hidden h-[420px]">
+    <section className="flex items-start justify-center bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 px-4 md:px-8 pt-8 pb-0 relative overflow-hidden min-h-[420px] md:h-[420px]">
       {/* Decoración de fondo */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse delay-1000"></div>
@@ -40,20 +40,20 @@ const HeroSection = () => {
         }
       `}</style>
       
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-[auto_1fr] gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center relative z-10">
         {/* Texto */}
         <div className="text-center md:text-left flex flex-col justify-center">
-          <h1 className="text-5xl font-light text-gray-900 mb-4 tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-light text-gray-900 mb-3 md:mb-4 tracking-tight">
             Jenniffer Espinoza
           </h1>
-          <p className="text-xl text-gray-600 font-light mb-10">
+          <p className="text-lg md:text-xl text-gray-600 font-light mb-6 md:mb-10">
             Ingeniería en Software · 8vo Semestre
           </p>
 
-          <div className="flex gap-6 justify-center md:justify-start mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center md:justify-start mb-6 md:mb-8">
             <button 
               onClick={() => scrollToSection('#proyectos')}
-              className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-light hover:shadow-lg transition-all flex items-center gap-2"
+              className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-light hover:shadow-lg transition-all flex items-center gap-2 justify-center"
             >
               Ver Proyectos
               <ArrowRight size={18} />
@@ -94,8 +94,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Imagen */}
-        <div className="flex justify-center md:justify-center relative ml-32 items-end h-full overflow-hidden">
+        {/* Imagen - Responsive */}
+        <div className="hidden md:flex justify-center md:justify-center relative ml-0 md:ml-32 items-end h-full overflow-hidden">
           <img 
             src="/images/home-hero.png" 
             alt="Hero" 
