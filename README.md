@@ -1,55 +1,95 @@
-# Portfolio Personal
+# Portfolio Personal - Jenniffer Espinoza
 
-Portafolio web desarrollado con React, TypeScript y Clean Architecture.
+Portafolio web profesional desarrollado con React, TypeScript y Clean Architecture.
 
-## Tecnologías
+## 🚀 Demo en Vivo
 
-- React 18 + TypeScript
-- Vite
-- TailwindCSS
-- Zustand (state management)
-- Axios
-- React Router
+- **Frontend**: https://portfolio-frontend-weld-beta.vercel.app/
+- **Backend API**: https://portfolio-backend-api-giwq.onrender.com/api
 
-## Backend
+## 🛠️ Tecnologías
 
-Este frontend consume la API del backend:
-https://github.com/jennifermarisolespinozagomez-ui/portfolio-backend-api
+- **Frontend**: React 18 + TypeScript + Vite
+- **Estilos**: TailwindCSS
+- **Estado**: Zustand
+- **HTTP Client**: Axios
+- **Routing**: React Router
+- **Iconos**: Lucide React
+- **Gráficos**: Recharts
 
-## Instalación
+## 📦 Instalación
 
 ```bash
 npm install
 ```
 
-## Configuración
+## ⚙️ Configuración
 
-Crea un archivo `.env` basado en `.env.example`:
+Crea un archivo `.env.local` para desarrollo:
 
-```
+```env
 VITE_API_URL=http://localhost:5003/api
 ```
 
-## Ejecución
+Para producción, la variable se configura en Vercel.
+
+## 🏃 Ejecución
 
 ```bash
+# Desarrollo
 npm run dev
-```
 
-## Build
-
-```bash
+# Build para producción
 npm run build
+
+# Preview del build
+npm run preview
+
+# Linting
+npm run lint
 ```
 
-## Estructura
+## 📁 Estructura del Proyecto
 
 ```
 src/
-├── domain/           # Entidades e interfaces
-├── application/      # Casos de uso y estado
-├── infrastructure/   # Implementaciones (API, repos)
-└── presentation/     # Componentes React
+├── domain/              # Entidades e interfaces de dominio
+│   ├── entities/        # Modelos de datos
+│   └── repositories/    # Interfaces de repositorios
+├── application/         # Lógica de aplicación
+│   ├── store/          # Estado global (Zustand)
+│   └── useCases/       # Casos de uso
+├── infrastructure/      # Implementaciones técnicas
+│   ├── api/            # Cliente HTTP
+│   └── repositories/   # Implementación de repositorios
+└── presentation/        # Capa de presentación
+    ├── components/     # Componentes React
+    ├── layouts/        # Layouts de página
+    └── pages/          # Páginas principales
 ```
+
+## 🎨 Características
+
+- ✅ Diseño responsive optimizado para móvil y desktop
+- ✅ Menú hamburguesa unificado
+- ✅ Arquitectura limpia y escalable
+- ✅ Integración con API backend
+- ✅ Dashboard con estadísticas
+- ✅ Secciones: Sobre mí, Experiencia, Proyectos, Tecnologías, Contacto
+
+## 🔗 Repositorio Backend
+
+El backend de este proyecto está en:
+https://github.com/jennifermarisolespinozagomez-ui/portfolio-backend-api
+
+## 📄 Licencia
+
+Este proyecto es de uso personal.
+
+## 👩‍💻 Autora
+
+**Jenniffer Marisol Espinoza Gómez**
+- Email: jennifermarisolespinozagomez@gmail.com
+- LinkedIn: [Ver perfil](https://www.linkedin.com/in/jenniffer-marisol-espinoza-gomez-ab4b932b1)
 
 
