@@ -2,28 +2,28 @@
 
 Portafolio web profesional desarrollado con React, TypeScript y Clean Architecture.
 
-## 🚀 Demo en Vivo
+## Demo en Vivo
 
-- **Frontend**: https://portfolio-frontend-weld-beta.vercel.app/
-- **Backend API**: https://portfolio-backend-api-giwq.onrender.com/api
+- Frontend: https://portfolio-frontend-weld-beta.vercel.app/
+- Backend API: https://portfolio-backend-api-giwq.onrender.com/api
 
-## 🛠️ Tecnologías
+## Tecnologías
 
-- **Frontend**: React 18 + TypeScript + Vite
-- **Estilos**: TailwindCSS
-- **Estado**: Zustand
-- **HTTP Client**: Axios
-- **Routing**: React Router
-- **Iconos**: Lucide React
-- **Gráficos**: Recharts
+- Frontend: React 18 + TypeScript + Vite
+- Estilos: TailwindCSS
+- Estado: Zustand
+- HTTP Client: Axios
+- Routing: React Router
+- Iconos: Lucide React
+- Gráficos: Recharts
 
-## 📦 Instalación
+## Instalación
 
 ```bash
 npm install
 ```
 
-## ⚙️ Configuración
+## Configuración
 
 Crea un archivo `.env.local` para desarrollo:
 
@@ -33,7 +33,7 @@ VITE_API_URL=http://localhost:5003/api
 
 Para producción, la variable se configura en Vercel.
 
-## 🏃 Ejecución
+## Ejecución
 
 ```bash
 # Desarrollo
@@ -49,7 +49,7 @@ npm run preview
 npm run lint
 ```
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -68,28 +68,30 @@ src/
     └── pages/          # Páginas principales
 ```
 
-## 🎨 Características
+## Características
 
-- ✅ Diseño responsive optimizado para móvil y desktop
-- ✅ Menú hamburguesa unificado
-- ✅ Arquitectura limpia y escalable
-- ✅ Integración con API backend
-- ✅ Dashboard con estadísticas
-- ✅ Secciones: Sobre mí, Experiencia, Proyectos, Tecnologías, Contacto
+- Diseño responsive optimizado para móvil y desktop
+- Arquitectura limpia y escalable
+- Integración con API backend
+- Dashboard con estadísticas
+- Secciones: Sobre mí, Experiencia, Proyectos, Tecnologías, Contacto
 
-## 🔗 Repositorio Backend
+## Mantener el Backend Activo
+
+El backend está desplegado en Render 
+1. Usa un servicio de monitoreo como UptimeRobot (https://uptimerobot.com)
+
+## Repositorio Backend
 
 El backend de este proyecto está en:
 https://github.com/jennifermarisolespinozagomez-ui/portfolio-backend-api
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es de uso personal.
 
-## 👩‍💻 Autora
+## Autora
 
-**Jenniffer Marisol Espinoza Gómez**
+Jenniffer Marisol Espinoza Gómez
 - Email: jennifermarisolespinozagomez@gmail.com
 - LinkedIn: [Ver perfil](https://www.linkedin.com/in/jenniffer-marisol-espinoza-gomez-ab4b932b1)
-
-
