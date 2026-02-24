@@ -53,11 +53,19 @@ const ProjectsSection = () => {
             {featuredProjects.map((project) => (
               <div key={project.id} className="group">
                 <div 
-                  className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden mb-4 rounded-lg cursor-pointer hover:shadow-lg transition-shadow"
+                  className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden mb-4 rounded-lg cursor-pointer hover:shadow-lg transition-all group"
                   onClick={() => project.imageUrl && handleImageClick(project.id)}
                 >
                   {project.imageUrl ? (
-                    <img src={project.imageUrl} alt={project.title} className="w-full h-full object-contain p-4" />
+                    <>
+                      <img src={project.imageUrl} alt={project.title} className="w-full h-full object-contain p-4" />
+                      {/* Overlay con "Ver más" */}
+                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span className="text-white text-sm font-light bg-slate-800 px-4 py-2 rounded-lg">
+                          Ver más
+                        </span>
+                      </div>
+                    </>
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-gray-400 text-3xl font-light">
                       {project.title.substring(0, 2)}
