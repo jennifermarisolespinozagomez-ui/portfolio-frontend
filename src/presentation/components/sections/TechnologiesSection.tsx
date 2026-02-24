@@ -10,9 +10,12 @@ const TechnologiesSection = () => {
 
   if (loading) {
     return (
-      <section id="tecnologias" className="py-16 px-8 bg-white">
+      <section id="tecnologias" className="py-12 md:py-16 px-4 md:px-8 bg-white">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-gray-600">Cargando tecnologías...</p>
+          <div className="flex flex-col items-center gap-4">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-600"></div>
+            <p className="text-gray-600 font-light">Cargando tecnologías...</p>
+          </div>
         </div>
       </section>
     )
@@ -20,9 +23,9 @@ const TechnologiesSection = () => {
 
   if (error) {
     return (
-      <section id="tecnologias" className="py-16 px-8 bg-white">
+      <section id="tecnologias" className="py-12 md:py-16 px-4 md:px-8 bg-white">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-red-600">{error}</p>
+          <p className="text-gray-600 font-light">No se pudieron cargar las tecnologías</p>
         </div>
       </section>
     )

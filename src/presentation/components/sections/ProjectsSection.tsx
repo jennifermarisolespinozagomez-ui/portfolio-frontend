@@ -46,7 +46,11 @@ const ProjectsSection = () => {
 
         {loading ? (
           <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-400 mx-auto"></div>
+            <div className="flex flex-col items-center gap-4">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-600"></div>
+              <p className="text-gray-600 font-light">Cargando proyectos...</p>
+              <p className="text-xs text-gray-500 font-light">El servidor está iniciando, esto puede tomar unos segundos</p>
+            </div>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-6 md:gap-12 max-w-5xl mx-auto">
