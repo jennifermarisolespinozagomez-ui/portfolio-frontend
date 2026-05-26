@@ -31,7 +31,7 @@ interface ProjectState {
   filterByType: (type: string) => Project[]
 }
 
-export const useProjectStore = create<ProjectState>((get) => ({
+export const useProjectStore = create<ProjectState>(() => ({
   projects: staticProjects,
   loading: false,
   error: null,
