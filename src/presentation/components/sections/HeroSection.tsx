@@ -50,6 +50,7 @@ const HeroSection = () => {
             Ingeniería en Software · 8vo Semestre
           </p>
 
+
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center md:justify-start mb-6 md:mb-8">
             <button 
               onClick={() => scrollToSection('#proyectos')}

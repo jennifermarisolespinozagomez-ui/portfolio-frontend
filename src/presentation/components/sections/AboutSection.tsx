@@ -8,7 +8,7 @@ const AboutSection = () => {
         
         <p className="text-sm md:text-base text-gray-700 leading-relaxed font-light text-center px-2">
           Me considero una persona responsable, dinámica, con capacidad para trabajar en equipo y fácil adaptación. 
-          Soy estudiante de 8º semestre de Ingeniería en Software y deseo contribuir con mi formación y experiencia 
+          Soy estudiante de 8vo semestre de Ingeniería en Software y deseo contribuir con mi formación y experiencia 
           profesional, proponiendo nuevas ideas con el fin de resolver problemas de una manera eficiente y lograr 
           las metas y objetivos trazados por la empresa. Tengo experiencia en aplicaciones tanto del frontend como 
           del backend.
@@ -16,11 +16,11 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12 text-center">
           <div>
-            <p className="text-2xl md:text-3xl font-light text-gray-900 mb-1">7</p>
+            <p className="text-2xl md:text-3xl font-light text-gray-900 mb-1">8</p>
             <p className="text-xs text-gray-600 font-light">Semestres</p>
           </div>
           <div>
-            <p className="text-2xl md:text-3xl font-light text-gray-900 mb-1">2</p>
+            <p className="text-2xl md:text-3xl font-light text-gray-900 mb-1">3</p>
             <p className="text-xs text-gray-600 font-light">Empresas</p>
           </div>
           <div>

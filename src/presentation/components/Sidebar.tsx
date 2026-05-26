@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Home, User, Briefcase, Code, Mail, Download, Phone, BarChart3, Menu, X } from 'lucide-react'
+import { Home, User, Briefcase, Code, Mail, Download, Phone, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 const Sidebar = () => {
@@ -8,7 +8,6 @@ const Sidebar = () => {
 
   const menuItems = [
     { icon: Home, label: 'Inicio', path: '/' },
-    { icon: BarChart3, label: 'Dashboard', path: '/dashboard' },
     { icon: User, label: 'Sobre Mí', path: '#sobre-mi' },
     { icon: Briefcase, label: 'Experiencia Técnica', path: '#experiencia' },
     { icon: Briefcase, label: 'Proyectos Destacados', path: '#proyectos' },
